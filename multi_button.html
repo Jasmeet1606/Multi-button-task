@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi button</title>
+</head>
+<body style="background-color: rgb(255, 0, 0); font-family: sans-serif; text-align: center; padding: 20px;">
+    <h2>Multi button task</h2>
+    <label>Input 1:</label>
+    <input id="input1"><br><br>
+
+    <label>Input 2:</label>
+    <input id="input2"><br><br>
+
+
+    <div style="background-color: skyblue; padding: 20px;">
+    <button onclick="btn1()">Button 1</button>
+    <button onclick="btn2()">Button 2</button>
+    <button onclick="btn3()">Button 3</button>
+    <button onclick="btn4()">Button 4</button>
+     <button onclick="btn5()">Button 5</button>
+   </div><br><br>
+    
+    <div style="display: flex; justify-content: center; gap: 40px;">
+    <div id="div1" style="width: 200px; height: 100px; background-color: white; padding: 10px;">HELLO</div>
+    <div id="div2" style="width: 200px; height: 100px; background-color: white; padding: 10px;">BYE</div>
+    </div>
+
+<script>
+    function btn1() {
+      let val = document.getElementById("input1").value;
+      document.getElementById("input2").value = val;
+    }
+    function btn2() {
+      let input1 = document.getElementById("input1").value;
+      let div1 = document.getElementById("div1").innerText;
+      let div2 = document.getElementById("div2").innerText;
+      alert("Input1: " + input1 + "\nDiv1: " + div1 + "\nDiv2: " + div2);
+    }
+    function btn3() {
+      let val = document.getElementById("input1").value;
+      document.getElementById("div2").innerText = val;
+    }
+   function btn4() {
+      let i1 = document.getElementById("input1").value;
+      let i2 = document.getElementById("input2").value;
+      let d1 = document.getElementById("div1").innerText;
+      let combined = d1 + i1 + i2;
+
+     alert("Combined: " + combined);
+     document.getElementById("div1").innerText = combined;
+}
+
+    function btn5() {
+      document.getElementById("div2").style.backgroundImage = "url('images/pp.jpg')";
+      document.getElementById("div2").style.backgroundSize = "cover";
+
+      document.getElementById("input1").type = "radio";
+      document.getElementById("input2").type = "checkbox";
+    }
+  </script>
+
+</body>
+</html>
